@@ -1,0 +1,3 @@
+* Ingresar de 1 a varias ciudades para observar su temperatura en tiempo real sin perder el dato anterior 
+
+* La ultima ciudad o país ingresado se actualizara el estatus cada minuto. 

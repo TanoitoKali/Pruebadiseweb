@@ -1,0 +1,106 @@
+body {
+    height: 100%;
+    width: 100%;
+    margin: 10px; /* Margen exterior de 10px alrededor de todo el contorno */
+    padding: 10px; /* Padding general dentro del contorno */
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    width: 100%;
+    height: 80px;
+    background-color: rgb(59, 4, 241);
+    border: 2px solid black;
+    padding: 10px; /* Padding general para el header */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header p {
+    font-size: 24px;
+    color: white; /* Cambia el color si lo prefieres */
+    margin: 0;
+}
+
+.nav {
+    width: 100%;
+    height: 50px; /* Aumenté un poco la altura para que se vea mejor */
+    background-color: pink;
+    border: 2px solid black;
+    margin-top: 10px; /* Margin para separar el nav del header */
+    padding: 10px; /* Padding general para la nav */
+    display: flex;
+    justify-content: center; /* Centra los enlaces */
+    align-items: center; /* Centra los enlaces verticalmente */
+}
+
+.nav a {
+    color: black; /* Color de los enlaces */
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    margin: 0 15px; /* Espacio entre los enlaces */
+    font-size: 18px; /* Tamaño de la fuente */
+    font-weight: bold; /* Negrita para los enlaces */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+}
+
+.nav a:hover {
+    color: white; /* Cambia el color del texto cuando pasa el cursor */
+    background-color: rgb(59, 4, 241); /* Cambia el fondo cuando pasa el cursor */
+    padding: 5px 10px; /* Padding para hacer el enlace más grande al pasar el cursor */
+    border-radius: 5px; /* Bordes redondeados al pasar el cursor */
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    flex-grow: 1;
+    height: calc(100vh - 170px - 10px); /* Ajusta según el tamaño de header, nav y footer */
+    padding: 10px; /* Padding general para la container */
+}
+
+.sidebar {
+    width: 25%;
+    background-color: lavender;
+    border: 2px solid black;
+    padding: 0; /* Eliminamos el padding para que el GIF ocupe todo el espacio */
+    height: 100%; /* Asegura que la sidebar ocupe todo el alto disponible */
+}
+
+
+.content {
+    width: 75%;
+    background-color: yellow;
+    border: 2px solid black;
+    padding: 10px; /* Padding general para la content */
+}
+
+.mustang-image {
+    width: 100%; /* La imagen ocupará el 100% del ancho disponible */
+    height: auto; /* Mantiene las proporciones de la imagen */
+    border-radius: 8px; /* Bordes redondeados (opcional) */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra opcional */
+}
+
+.gif-image {
+    width: 100%;  /* El GIF ocupará todo el ancho de la sidebar */
+    height: 100%; /* El GIF ocupará todo el alto disponible de la sidebar */
+    object-fit: cover; /* Mantiene el aspecto del GIF sin distorsionarlo */
+}
+
+.footer {
+    width: 100%;
+    height: 60px;
+    background-color: orange;
+    border: 2px solid black;
+    padding: 10px; /* Padding general para el footer */
+    text-align: center; /* Centra el texto en el footer */
+}
+
+.footer p {
+    margin: 0;
+    color: black;
+}

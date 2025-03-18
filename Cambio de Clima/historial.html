@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial de Clima</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="historial.html">Historial</a></li>
+        </ul>
+    </nav>
+    <div class="dashboard">
+        <h1>Historial de Consultas de Clima</h1>
+        <ul id="history-list"></ul>
+    </div>
+
+    <script>
+        fetch('http://localhost:3000/obtener-historial')
+            .then(response => response.json())
+            .then(data => {
+                const historyList = document.getElementById('history-list');
+                data.forEach(entry => {
+                    const li = document.createElement('li');
+                    li.innerHTML = `Ciudad: ${entry.ciudad}, Temperatura: ${entry.temperatura} °C, Humedad: ${entry.humedad}%, Viento: ${entry.viento} m/s, Fecha y Hora: ${entry.fecha_hora}`;
+                    historyList.appendChild(li);
+                });
+            })
+            .catch(error => {
+                console.error('Error al obtener el historial:', error);
+            });
+    </script>
+</body>
+</html>

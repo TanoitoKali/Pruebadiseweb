@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pronóstico del Clima</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="historial.html">Historial</a></li>
+        </ul>
+    </nav>
+    <div class="dashboard">
+        <h1>Comparando Climas por minuto</h1>
+
+        <div id="search-widget">
+            <p>Ingresa el nombre de una ciudad o país</p>
+            <input type="text" id="city" placeholder="Ej. Madrid, Barcelona">
+            <button id="get-weather">Obtener Clima</button>
+        </div>
+
+        <div class="weather-panel" id="data-output">
+            <div class="panel">
+                <h3>Temperatura</h3>
+                <p id="temperature">Cargando...</p>
+            </div>
+            <div class="panel">
+                <h3>Humedad</h3>
+                <p id="humidity">Cargando...</p>
+            </div>
+            <div class="panel">
+                <h3>Viento</h3>
+                <p id="wind">Cargando...</p>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="weather-chart" width="400" height="200"></canvas>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
